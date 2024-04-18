@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/astevko/grpc-ping-service";
+
+
+package grpcping;
+
+service PingService {
+  rpc Ping(PingRequest) returns (PingResponse);
+}
+
+message PingRequest {}
+
+message PingResponse {
+  string message = 1;
+}
